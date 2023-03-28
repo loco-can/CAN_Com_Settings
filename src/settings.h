@@ -2,7 +2,7 @@
  * LOCO-CAN module settings file
  * 
  * @author: Thomas H Winkler
- * @copyright: 2020
+ * @copyright: 2020-2023
  * @lizence: GG0
  */
 

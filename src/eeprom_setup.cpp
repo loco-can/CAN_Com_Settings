@@ -25,7 +25,7 @@ uint8_t EEPROM_SETUP::getByte(uint8_t idx) {
 uint16_t EEPROM_SETUP::getInt(uint8_t idx) {
 
 	if ((idx + 1) < _max_settings) {
-		return EEPROM.read(idx) | EEPROM.read(idx+1) << 8;
+		return (uint16_t)EEPROM.read(idx) | (uint32_t)EEPROM.read(idx+1) << 8;
 	}
 
 	return false;
@@ -36,7 +36,7 @@ uint16_t EEPROM_SETUP::getInt(uint8_t idx) {
 uint32_t EEPROM_SETUP::getLong(uint8_t idx) {
 
 	if ((idx + 3) < _max_settings) {
-		return EEPROM.read(idx) | EEPROM.read(idx-1) << 8 | EEPROM.read(idx+2) << 16 | EEPROM.read(idx+3) << 24;
+		return  (uint32_t)EEPROM.read(idx) | (uint32_t)EEPROM.read(idx+1) << 8 | (uint32_t)EEPROM.read(idx+2) << 16 | (uint32_t)EEPROM.read(idx+3) << 24;
 	}
 
 	return false;

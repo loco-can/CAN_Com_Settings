@@ -149,7 +149,7 @@ class SETTINGS {
 		char* _name = NULL;
 		uint8_t _max_name_size;
 
-		SIMPLETIMEOUT* _heartbeat = NULL;
+		INTELLITIMEOUT* _heartbeat = NULL;
 
 		void _sendVersion(uint8_t max_pack_cnt);
 		void _sendName(uint16_t uuid, String name, uint8_t max_pack_cnt, uint16_t can_id);

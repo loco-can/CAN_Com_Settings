@@ -80,7 +80,7 @@ bool SETTINGS::register_setting(uint16_t def) {
 // if not set, no heartbeat is sent
 void SETTINGS::set_heartbeat(uint16_t timeout) {
 
-	_heartbeat = new SIMPLETIMEOUT;
+	_heartbeat = new INTELLITIMEOUT;
 	_heartbeat->begin(timeout);
 }
 
